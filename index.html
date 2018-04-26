@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>weather</title>
+</head>
+<body>
+<div class="container">
+    <div class="weather">
+        <h2 class="weather__title"></h2>
+        <span class="weather__description"></span>
+        <span class="weather__temp"></span>
+        <img src="" alt="" class="weather__icon">
+
+        <ul class="weather__list">
+            <li class="weather__item weather__rise"></li>
+            <li class="weather__item weather__set"></li>
+            <li class="weather__item weather__humidity"></li>
+            <li class="weather__item weather__wind"></li>
+        </ul>
+
+        <button class="btn weather__btn">change location</button>
+
+    </div>
+    <div class="modal__bg">
+        <div class="modal-box">
+            <div class="modal">
+                <div class="modal__up"><h3 class="modal__title">Choose Location</h3><span class="modal__close">x</span>
+                </div>
+                <div class="modal__form">
+                    <label for="city" class="modal__name">City</label>
+                    <input type="text" id="city" class="modal__city">
+                </div>
+                <button class="btn modal__btn">Save change</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="storage.js"></script>
+<script src="weather.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    font-family: 'Merriweather', serif;
+
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10rem;
+}
+
+/*weather*/
+.weather {
+    background: #4FA8E5;
+    max-width: 500px;
+    min-height: 500px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.weather__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.weather__title {
+    font-size: 5rem;
+    letter-spacing: 1px;
+    margin: 0;
+
+}
+
+.weather__description {
+    display: block;
+    color: #353535;
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
+.weather__temp {
+    display: block;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.weather__icon {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.weather__item {
+    color: #353535;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 1rem 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.weather__item:not(:last-child) {
+    border-bottom: 1px solid #353535;
+
+}
+
+.btn {
+    min-width: 150px;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+}
+
+.weather__btn {
+    margin-top: 4.5rem;
+    background: #353535;
+    border: 1px dashed #353535;
+    transition: all .2s;
+
+}
+
+.weather__btn:hover {
+    background: rgba(82, 161, 224, .8);
+    transform: translateY(-3px);
+
+}
+
+.weather__btn:active {
+    transform: translateY(4px);
+
+}
+
+/*modal*/
+.modal__bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: all .3s;
+    z-index: -1;
+
+
+}
+.modal__bg--active{
+    background-color: rgba(107, 107, 107, .7);
+    z-index: 10;
+
+}
+
+.modal-box {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 400px;
+    min-height: 200px;
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all .8s;
+
+
+}
+.modal-box--active {
+    top:30%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+
+}
+
+.modal__up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #353535;
+    border-bottom: 1px solid #353535;
+    padding-bottom: 1rem;
+}
+
+.modal__title {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    color: #49A4E4;
+}
+
+.modal__form {
+    margin: 2rem auto 3rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+}
+
+.modal__name {
+    color: #49A4E4;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-right: auto;
+}
+
+.modal__close {
+    cursor: pointer;
+    transition: all .2s;
+
+}
+
+.modal__close:hover {
+    color: #49A4E4;
+
+}
+
+.modal__city {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #353535;
+    padding: .5rem;
+    outline: none;
+    transition: all .2s;
+}
+.modal__city--error{
+    border: 2px solid #E4163C;
+
+}
+
+#city:focus {
+    border: 2px solid #52A1E0;
+}
+
+.modal__btn {
+    background: #353535;
+    border: 1px dashed #353535;
+    transition: all .2s;
+}
+
+.modal__btn:hover {
+    background: rgba(82, 161, 224, .8);
+    transform: translateY(-3px);
+
+}
+
+.modal__btn:active {
+    transform: translateY(4px);
+
+}
+
