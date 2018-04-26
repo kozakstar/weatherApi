@@ -7,7 +7,7 @@ class Weather {
     getWeather(){
         return new Promise((resolve,reject) =>{
             let xhr = new XMLHttpRequest();
-            xhr.open('GET',`http://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&APPID=${this.apiKey}&lang=ru`);
+            xhr.open('GET',`//api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&APPID=${this.apiKey}&lang=ru`);
             xhr.addEventListener('load', () => {
                 if(xhr.status === 200){
                     resolve(JSON.parse(xhr.response))
