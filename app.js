@@ -7,7 +7,7 @@ let modal = document.querySelector(".modal-box");
 const ui = new UI;
 const storage = new Storage();
 
-// Get stored location data
+// Get weather LS
 const weatherLocation = storage.getLocalCity();
 // Init weather
 const weather = new Weather(weatherLocation.city);
@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', getWeather);
 
 
 changeBtn.addEventListener('click', () => {
-    modalBg = document.querySelector(".modal__bg");
-    modal = document.querySelector(".modal-box");
+
     modalBg.classList.add('modal__bg--active');
     modal.classList.add('modal-box--active');
 });
@@ -35,8 +34,6 @@ modalBtn.addEventListener('click', (e) => {
         weather.changeLocation(city);
         getWeather();
         storage.setLocalCity(city);
-        modalBg = document.querySelector(".modal__bg");
-        modal = document.querySelector(".modal-box");
         modalBg.classList.remove('modal__bg--active');
         modal.classList.remove('modal-box--active')
 
